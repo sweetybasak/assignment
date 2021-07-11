@@ -16,9 +16,11 @@
 		}
 	</style>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Cars By brand</title>
 </head>
 <body>
+<jsp:include page="include.jsp"></jsp:include>
+<h1 style="text-align:center;">Search</h1>
 <table>
 	<tr>
 		<th>Model</th>

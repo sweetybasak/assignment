@@ -27,7 +27,7 @@ public class CarsController {
 	@RequestMapping(value="/cars",method=RequestMethod.GET)
 	public String initForm(Model model)
 	{
-		
+		model.addAttribute("heading","Welcome to Cars24");
 		model.addAttribute("command",cars);
 		return "addCars";
 	}
@@ -64,6 +64,7 @@ public class CarsController {
 		{
 			List<Cars> list = repo.getAllCars();
 			model.addAttribute("list",list);
+			model.addAttribute("heading","Welcome to Cars24");
 			return "showCars";
 			
 		}
@@ -73,13 +74,14 @@ public class CarsController {
 		{
 			List<Cars> list = repo.getUnsoldCars();
 			model.addAttribute("list",list);
+			model.addAttribute("heading","Welcome to Cars24");
 			return "showUnsoldCars";
 			
 		}
 	 @RequestMapping(value="/cars/showByBrand",method=RequestMethod.GET)
 		public String initFormBrand(Model model)
 		{
-		 
+		 model.addAttribute("heading","Welcome to Cars24");
 			model.addAttribute("command",cars);
 			return "selectBrand";
 		}
@@ -87,7 +89,7 @@ public class CarsController {
 		public String findCarsByBrand(@ModelAttribute("command") @RequestParam("brand")String brand, Model model)
 		{
 			List<Cars> list = repo.getCarsByBrand(brand);
-			
+			model.addAttribute("heading","Welcome to Cars24");
 			model.addAttribute("list",list);
 			return "carsByBrand";
 		}

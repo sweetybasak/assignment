@@ -19,7 +19,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<jsp:include page="include.jsp"></jsp:include>
 <table>
 	<tr>
 		<th>Model</th>

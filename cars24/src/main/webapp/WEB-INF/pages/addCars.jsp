@@ -10,9 +10,7 @@
 <title>Cars24</title>
 </head>
 <body>
-<h1 style="text-align:center; color:blue;">Welcome to Cars24</h1>
-<h2>The best website to sell and buy a new car</h2>
-<h3><a href="index.jsp"></a></h3>
+<jsp:include page="include.jsp"></jsp:include>
 <form:form method="post" action="cars">
 <form:label path="model">Model</form:label>
 <form:input path="model"/>
